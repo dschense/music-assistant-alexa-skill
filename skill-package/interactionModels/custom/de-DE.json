@@ -1,0 +1,199 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "music assistent",
+      "intents": [
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": [
+            "was kann ich sagen",
+            "hilf mir",
+            "hilfe"
+          ]
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": [
+            "stop",
+            "anhalten",
+            "beenden",
+            "halt"
+          ]
+        },
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": [
+            "abbrechen",
+            "nein danke",
+            "lass gut sein"
+          ]
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.ResumeIntent",
+          "samples": [
+            "weiter",
+            "fortsetzen",
+            "spiel weiter"
+          ]
+        },
+        {
+          "name": "AMAZON.PauseIntent",
+          "samples": [
+            "pause",
+            "pausiere",
+            "halte an",
+            "stopp die musik"
+          ]
+        },
+        {
+          "name": "AMAZON.NextIntent",
+          "samples": [
+            "nächster",
+            "nächster titel",
+            "überspringen",
+            "weiter"
+          ]
+        },
+        {
+          "name": "AMAZON.PreviousIntent",
+          "samples": [
+            "zurück",
+            "vorheriger titel",
+            "nochmal vorheriger"
+          ]
+        },
+
+        {
+          "name": "PlaySomethingIntent",
+          "slots": [
+            { "name": "song", "type": "SONG" },
+            { "name": "artist", "type": "ARTIST" },
+            { "name": "album", "type": "ALBUM" },
+            { "name": "playlist", "type": "PLAYLIST" }
+          ],
+          "samples": [
+            "spiele {song} von {artist}",
+            "spiele {song}",
+            "spiele den song {song}",
+            "spiele {album} von {artist}",
+            "spiele das album {album}",
+            "spiele {artist}",
+            "spiele {playlist} playlist",
+            "starte {playlist}"
+          ]
+        },
+        {
+          "name": "SearchIntent",
+          "slots": [
+            { "name": "song", "type": "SONG" },
+            { "name": "artist", "type": "ARTIST" },
+            { "name": "album", "type": "ALBUM" },
+            { "name": "playlist", "type": "PLAYLIST" }
+          ],
+          "samples": [
+            "suche nach {song}",
+            "suche {artist}",
+            "suche das album {album}",
+            "suche die playlist {playlist}"
+          ]
+        },
+        {
+          "name": "PlayRadioIntent",
+          "slots": [
+            { "name": "seedArtist", "type": "ARTIST" }
+          ],
+          "samples": [
+            "spiele ähnliche musik wie {seedArtist}",
+            "starte radio von {seedArtist}",
+            "spiele {seedArtist} radio"
+          ]
+        },
+        {
+          "name": "SetShuffleIntent",
+          "slots": [
+            { "name": "state", "type": "ONOFF" }
+          ],
+          "samples": [
+            "shuffle {state}",
+            "zufallswiedergabe {state}",
+            "mische {state}"
+          ]
+        },
+        {
+          "name": "SetRepeatIntent",
+          "slots": [
+            { "name": "mode", "type": "REPEATMODE" }
+          ],
+          "samples": [
+            "wiederhole {mode}",
+            "repeat {mode}"
+          ]
+        },
+        {
+          "name": "SetVolumeIntent",
+          "slots": [
+            { "name": "level", "type": "AMAZON.NUMBER" }
+          ],
+          "samples": [
+            "lautstärke auf {level}",
+            "stell die lautstärke auf {level}",
+            "setze lautstärke auf {level}"
+          ]
+        },
+        {
+          "name": "VolumeUpIntent",
+          "samples": [
+            "lauter",
+            "mach lauter",
+            "erhöhe die lautstärke"
+          ]
+        },
+        {
+          "name": "VolumeDownIntent",
+          "samples": [
+            "leiser",
+            "mach leiser",
+            "verringere die lautstärke"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "name": "ONOFF",
+          "values": [
+            { "name": { "value": "an", "synonyms": ["ein", "einschalten", "aktivieren"] } },
+            { "name": { "value": "aus", "synonyms": ["ausschalten", "deaktivieren"] } }
+          ]
+        },
+        {
+          "name": "REPEATMODE",
+          "values": [
+            { "name": { "value": "aus", "synonyms": ["keine", "nichts"] } },
+            { "name": { "value": "titel", "synonyms": ["song", "track"] } },
+            { "name": { "value": "alle", "synonyms": ["playlist", "warteschlange"] } }
+          ]
+        },
+        {
+          "name": "ARTIST",
+          "values": []
+        },
+        {
+          "name": "SONG",
+          "values": []
+        },
+        {
+          "name": "ALBUM",
+          "values": []
+        },
+        {
+          "name": "PLAYLIST",
+          "values": []
+        }
+      ]
+    }
+  }
+}
